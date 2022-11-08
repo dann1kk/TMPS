@@ -72,8 +72,8 @@ To create an object(employee) in this case it is necessary to  give to it also a
    
 In this case, in the __Employees__ class, where we have all the basic attributes, it was added a group of objects in the form of a list of __colleagues__, this group of objects 
 can be treated in a similar manner, which actually represents the implementation of the __Composite Pattern__.
-public class Employees extends StoreEmployee {
 ~~~
+public class Employees extends StoreEmployee {
     private String name;
     private String surname;
     private Integer age;
