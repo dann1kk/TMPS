@@ -25,7 +25,7 @@ This project illustrates the implementation of the following structural design p
 Each department has 3 types of available job types: manager, consultant and cashier. The main object of our project is the __StoreEmployee__. This abstract class also has an attribute which is an interface used to differentiate employees between departments, __StoreEmployeeAPI__.
 The __StoreEmployee__ is extended by the class __Employees__ that has all the basic attributes with the information about the specific employee and the list of colleagues. 
 1. Adapter
-   Adapter is a design pattern that allows objects with incompatible interfaces to collaborate. For the Adapter pattern it has implemented 2 classes, the __StoreEmployeeAdapter__ 
+   is a design pattern that allows objects with incompatible interfaces to collaborate. For the Adapter pattern it has implemented 2 classes, the __StoreEmployeeAdapter__ 
 and __EmployeeBuilder__. In the __EmployeeBuilder__, first we see if the department is valid, create the adapter and then execute the specific method, as we have 3 specialized classes __FoodEmployee__, __FurnitureEmployee__ and __ClothingEmployee__ .
 ~~~
 StoreEmployeeAdapter(String department, String job) {
@@ -49,7 +49,7 @@ System.out.println("Working in the Furniture Store!");
 }
 ~~~
 2. Bridge
-   Bridge is a design pattern that lets you split a large class, or a set of closely related classes into two separate hierarchies.
+    is a design pattern that lets you split a large class, or a set of closely related classes into two separate hierarchies.
 
 The variable __storeAPI__ is used in the __Employee__ class which is the bridge between the implementation and the abstract class __StoreEmployee__. In fact, it is used a reference to 
 the interface __StoreEmployeeAPI__. Depending on the job of the employee, we have different classes which implement different methods from the interface.
@@ -68,6 +68,7 @@ public class ConsultantEmployee implements StoreEmployeeAPI {
 }
 ~~~
 To create an object(employee) in this case it is necessary to  give to it also a reference to the class which implements the API depending on the job and department of the employee.
+
 3. Composite design pattern lets you compose objects into tree structures and then work with these structures as if they were individual objects;
    
 In this case, in the __Employees__ class, where we have all the basic attributes, it was added a group of objects in the form of a list of __colleagues__, this group of objects 
